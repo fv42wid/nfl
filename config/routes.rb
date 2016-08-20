@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :authors
   resources :stories
   
   root :to => redirect('/stories')
