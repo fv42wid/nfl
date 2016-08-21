@@ -6,7 +6,7 @@
 	<article class="post">
 	  <div class="post-thumb">
 	    <%= link_to(image_tag(@last_story.image), @last_story) %>
-	    <a href="#" class="post-thumb-overlay text-center">
+	    <a href="<%= story_path(@last_story) %>" class="post-thumb-overlay text-center">
 	      <div class="text-uppercase text-center">View Post</div>
 	    </a>
 	  </div>
@@ -56,7 +56,94 @@
 	    </div>
 	  </div>
 	</article>
-      </div>
+	<div class="row">
+	  <% @stories.each do |story| %>
+	    <div class="col-md-6">
+	      <article class=" post post-grid">
+		<div class="post-thumb">
+		  <%= link_to(image_tag(story.image), story) %>
+		  <a href="<%= story_path(story) %>" class="post-thumb-overlay text-center">
+		    <div class="text-uppercase text-center">View Post</div>
+		  </a>
+		</div>
+		<div class="post-content">
+		  <header class="entry-header text-center text-uppercase">
+		    <h1 class="entry-title">
+		      <%= link_to story.title, story %>
+		    </h1>
+		  </header>
+		  <div class="entry-content">
+		    <p><%= story.body %></p>
+		    <div class="social-share">
+		      <span class="social-share-title pull-left text-capitalize">
+			By <%= story.author.email %> On <%= story.created_at.to_formatted_s(:long) %>
+		      </span>
+		    </div>
+		  </div>
+		</div>
+	      </article>
+	    </div>
+	  <% end %>
+	</div>
+      </div> <!-- col-md-8 -->
+      <div class="col-md-4" data-sticky-column>
+	<div class="primary-sidebar">
+	  <aside class="widget about-me-widget">
+	    <div class="about-me-img">
+	      <div class="about-me-content text-center">
+		<%= image_tag '/images/me.png', :class => "img-me" %>
+		<h3 class="text-uppercase">Rubel Miah</h3>
+		<p>
+		  Rubel is enthusiastic and passionate WP Theme Cooker. He is Currently working as a Lead WordPress Developer.
+		</p>
+	      </div>
+	    </div>
+	    <%= render partial: "layouts/social_share" %>
+	  </aside>
+	  <aside class="widget news-letter">
+	    <h3 class="widget-title text-uppercase text-center">
+	      Subscribe
+	    </h3>
+	    <form action="#">
+	      <input type="email" placeholder="Your email address">
+	      <input type="submit" value="Subscribe Now" class="text-uppercase text-center btn btn-subscribe">
+	    </form>
+	  </aside>
+	  <aside class="widget">
+	    <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
+	    <div class="popular-post">
+	      <a href="#" class="popular-img">
+		<%= image_tag '/images/p1.jpg' %>
+		<div class="p-overlay"></div>
+	      </a>
+	      <div class="p-content">
+		<a href="#" class="text-uppercase">Home is peaceful place</a>
+		<span class="p-date">February 15, 2016</span>
+	      </div>
+	    </div>
+	    <div class="popular-post">
+              <a href="#" class="popular-img">
+		<%= image_tag '/images/p1.jpg' %>
+		<div class="p-overlay"></div>
+              </a>
+	      <div class="p-content">
+		<a href="#" class="text-uppercase">Homeis peaceful place</a>
+		<span class="p-date">February 15, 2016</span>
+              </div>
+            </div>
+	    <div class="popular-post">
+              <a href="#" class="popular-img">
+		<%= image_tag '/images/p1.jpg' %>
+		<div class="p-overlay"></div>
+              </a>
+	      <div class="p-content">
+		<a href="#" class="text-uppercase">Homeis peaceful place</a>
+		<span class="p-date">February 15, 2016</span>
+              </div>
+            </div>
+	  </aside>
+	</div>
+      </div> <!-- col-md-4 -->
     </div>
   </div>
 </div>
