@@ -73,7 +73,7 @@
 		    </h1>
 		  </header>
 		  <div class="entry-content">
-		    <p><%= story.body %></p>
+		    <p><%= story.body[0..10] %></p>
 		    <div class="social-share">
 		      <span class="social-share-title pull-left text-capitalize">
 			By <%= story.author.email %> On <%= story.created_at.to_formatted_s(:long) %>

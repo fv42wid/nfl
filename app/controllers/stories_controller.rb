@@ -5,8 +5,11 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all
     @last_story = Story.last
+    last_array = Array.new
+    last_array.push(@last_story)
+    @stories = Story.last(10).reverse - last_array
+    
   end
 
   # GET /stories/1
