@@ -8,7 +8,7 @@ class StoriesController < ApplicationController
     @last_story = Story.last
     last_array = Array.new
     last_array.push(@last_story)
-    @stories = Story.last(10).reverse - last_array
+    @stories = Story.last(12).reverse - last_array
     
   end
 
