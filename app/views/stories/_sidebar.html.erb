@@ -1,25 +1,31 @@
-<div class="col-md-4" data-sticky-column>
+<div class="col-md-4" data-sticky_column>
   <div class="primary-sidebar">
     <aside class="widget about-me-widget">
       <div class="about-me-img">
-	<div class="about-me-content text-center">
-	  <%= image_tag '/images/me.png', :class => "img-me" %>
-	  <h3 class="text-uppercase">Rubel Miah</h3>
-	  <p>
-	    Rubel is enthusiastic and passionate WP Theme Cooker. He is Currently working as a Lead WordPress Developer.
-	  </p>
-	</div>
+        <div class="about-me-content text-center">
+          <%= image_tag '/images/me.png', :class => "img-me" %>
+          <h3 class="text-uppercase">Rubel Miah</h3>
+          <p>Rubel is enthusiastic and passionate WP Theme Cooker. He is Currently working as a Lead WordPress Developer.</p>
+        </div>
       </div>
-      <%= render partial: "layouts/social_share" %>
+      <div class="social-share">
+        <ul class="text-center text-center">
+          <li><a class="s-facebook" href=""><i class="fa fa-facebook"></i></a></li>
+          <li><a class="s-twitter" href=""><i class="fa fa-twitter"></i></a></li>
+          <li><a class="s-google-plus" href=""><i class="fa fa-google-plus"></i></a></li>
+          <li><a class="s-linkedin" href=""><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="s-instagram" href=""><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
     </aside>
     <aside class="widget news-letter">
-      <h3 class="widget-title text-uppercase text-center">
-	Subscribe
-      </h3>
+      <h3 class="widget-title text-uppercase text-center">Get Newsletter</h3>
       <form action="#">
-	<input type="email" placeholder="Your email address">
-	<input type="submit" value="Subscribe Now" class="text-uppercase text-center btn btn-subscribe">
+        <input type="email" placeholder="Your email address">
+        <input type="submit" value="Subscribe Now"
+               class="text-uppercase text-center btn btn-subscribe">
       </form>
+
     </aside>
     <aside class="widget">
       <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
@@ -27,162 +33,198 @@
 	<a href="#" class="popular-img">
 	  <%= image_tag '/images/p1.jpg' %>
 	  <div class="p-overlay"></div>
-	</a>
-	<div class="p-content">
-	  <a href="#" class="text-uppercase">Home is peaceful place</a>
-	  <span class="p-date">February 15, 2016</span>
-	</div>
-      </div>
-      <div class="popular-post">
-        <a href="#" class="popular-img">
-	  <%= image_tag '/images/p1.jpg' %>
-	  <div class="p-overlay"></div>
         </a>
-	<div class="p-content">
-	  <a href="#" class="text-uppercase">Homeis peaceful place</a>
-	  <span class="p-date">February 15, 2016</span>
+        <div class="p-content">
+          <a href="#" class="text-uppercase">Home is peaceful Place</a>
+          <span class="p-date">February 15, 2016</span>
         </div>
       </div>
       <div class="popular-post">
         <a href="#" class="popular-img">
 	  <%= image_tag '/images/p1.jpg' %>
-	  <div class="p-overlay"></div>
+          <div class="p-overlay"></div>
         </a>
-	<div class="p-content">
-	  <a href="#" class="text-uppercase">Homeis peaceful place</a>
-	  <span class="p-date">February 15, 2016</span>
+        <div class="p-content">
+          <a href="#" class="text-uppercase">Home is peaceful Place</a>
+          <span class="p-date">February 15, 2016</span>
+        </div>
+      </div>
+      <div class="popular-post">
+        <a href="#" class="popular-img">
+	  <%= image_tag '/images/p1.jpg' %>
+          <div class="p-overlay"></div>
+        </a>
+        <div class="p-content">
+          <a href="#" class="text-uppercase">Home is peaceful Place</a>
+          <span class="p-date">February 15, 2016</span>
         </div>
       </div>
     </aside>
     <aside class="widget">
       <h3 class="widget-title text-uppercase text-center">Featured Posts</h3>
-      <div id="widget-feature" class="owl-caousel owl-theme" style="opacity: 1; display: block;">
+      <div id="widget-feature" class="owl-carousel">
 	<div class="owl-wrapper-outer">
 	  <div class="owl-wrapper">
 	    <div class="owl-item">
-	      <div class="item">
+              <div class="item">
 		<div class="feature-content">
 		  <%= image_tag '/images/p1.jpg' %>
 		  <a href="#" class="overlay-text text-center">
 		    <h5 class="text-uppercase">Home is peaceful</h5>
-		    <p>Lorem ipsum dolor sit ametsetetur adipscing elitr, sed</p>
+		    <p>Lorem ipsum dolor sit ametsetetur sadipscing elitr, sed </p>
 		  </a>
 		</div>
-	      </div>
+              </div>
+	    </div>
+	  </div>
+	  <div class="owl-wrapper">
+	    <div class="owl-item">
+              <div class="item">
+		<div class="feature-content">
+		  <%= image_tag '/images/p2.jpg' %>
+		  <a href="#" class="overlay-text text-center">
+		    <h5 class="text-uppercase">Home is peaceful</h5>
+		    <p>Lorem ipsum dolor sit ametsetetur sadipscing elitr, sed </p>
+		  </a>
+		</div>
+              </div>
+	    </div>
+	  </div>
+	  <div class="owl-wrapper">
+	    <div class="owl-item">
+              <div class="item">
+		<div class="feature-content">
+		  <%= image_tag '/images/p3.jpg' %>
+		  <a href="#" class="overlay-text text-center">
+		    <h5 class="text-uppercase">Home is peaceful</h5>
+		    <p>Lorem ipsum dolor sit ametsetetur sadipscing elitr, sed </p>
+		  </a>
+		</div>
+              </div>
 	    </div>
 	  </div>
 	</div>
       </div>
     </aside>
     <aside class="widget pos-padding">
-      <h3 class="widget-title text-uppercase text-center">
-	Recent Posts
-      </h3>
+      <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
       <div class="thumb-latest-posts">
-	<div class="media">
-	  <div class="media-left">
-	    <a href="#" class="popular-img">
+        <div class="media">
+          <div class="media-left">
+            <a href="#" class="popular-img">
 	      <%= image_tag '/images/r-p.jpg' %>
-	      <div class="p-overlay"></div>
-	    </a>
-	  </div>
-	  <div class="p-content">
-	    <a href="#" class="text-uppercase">Home is peaceful Place</a>
-	    <span class="p-date">February 15, 2016</span>
-	  </div>
-	</div>
-      </div> <!-- thumb-latest-posts -->
-      <div class="thumb-latest-posts">
-        <div class="media">
-	  <div class="media-left">
-            <a href="#" class="popular-img">
-              <%= image_tag '/images/r-p.jpg' %>
               <div class="p-overlay"></div>
             </a>
-	  </div>
-	  <div class="p-content">
+          </div>
+          <div class="p-content">
             <a href="#" class="text-uppercase">Home is peaceful Place</a>
             <span class="p-date">February 15, 2016</span>
-	  </div>
+          </div>
         </div>
-      </div> <!-- thumb-latest-posts -->
+      </div>
       <div class="thumb-latest-posts">
         <div class="media">
-	  <div class="media-left">
+          <div class="media-left">
             <a href="#" class="popular-img">
-              <%= image_tag '/images/r-p.jpg' %>
+	      <%= image_tag '/images/r-p.jpg' %>
               <div class="p-overlay"></div>
             </a>
-	  </div>
-	  <div class="p-content">
+          </div>
+          <div class="p-content">
             <a href="#" class="text-uppercase">Home is peaceful Place</a>
             <span class="p-date">February 15, 2016</span>
-	  </div>
+          </div>
         </div>
-      </div> <!-- thumb-latest-posts -->
+      </div>
       <div class="thumb-latest-posts">
         <div class="media">
-	  <div class="media-left">
+          <div class="media-left">
             <a href="#" class="popular-img">
-              <%= image_tag '/images/r-p.jpg' %>
+	      <%= image_tag '/images/r-p.jpg' %>
               <div class="p-overlay"></div>
             </a>
-	  </div>
-	  <div class="p-content">
+          </div>
+          <div class="p-content">
             <a href="#" class="text-uppercase">Home is peaceful Place</a>
             <span class="p-date">February 15, 2016</span>
-	  </div>
+          </div>
         </div>
-      </div> <!-- thumb-latest-posts -->
+      </div>
+      <div class="thumb-latest-posts">
+        <div class="media">
+          <div class="media-left">
+            <a href="#" class="popular-img">
+	      <%= image_tag '/images/r-p.jpg' %>
+              <div class="p-overlay"></div>
+            </a>
+          </div>
+          <div class="p-content">
+            <a href="#" class="text-uppercase">Home is peaceful Place</a>
+            <span class="p-date">February 15, 2016</span>
+          </div>
+        </div>
+      </div>
     </aside>
     <aside class="widget border pos-padding">
-      <h3 class="widget-title text-uppercase text-center">
-	Categories
-      </h3>
+      <h3 class="widget-title text-uppercase text-center">Categories</h3>
       <ul>
-	<li>
-	  <a href="#">Food & Drinks</a>
-	  <span class="pull-right">(2)</span>
-	</li>
-	<li>
-	  <a href="#">Food & Drinks</a>
-	  <span class="pull-right">(2)</span>
-	</li>
-	<li>
-	  <a href="#">Food & Drinks</a>
-	  <span class="pull-right">(2)</span>
-	</li>
-	<li>
-	  <a href="#">Food & Drinks</a>
-	  <span class="pull-right">(2)</span>
-	</li>
-	<li>
-	  <a href="#">Food & Drinks</a>
-	  <span class="pull-right">(2)</span>
-	</li>
-	<li>
-	  <a href="#">Food & Drinks</a>
-	  <span class="pull-right">(2)</span>
-	</li>
+        <li>
+          <a href="">Food & Drinks</a>
+          <span class="post-count pull-right"> (2)</span>
+        </li>
+        <li>
+          <a href="">Travel</a>
+          <span class="post-count pull-right"> (2)</span>
+        </li>
+        <li>
+          <a href="">Business</a>
+          <span class="post-count pull-right"> (2)</span>
+        </li>
+        <li>
+          <a href="">Story</a>
+          <span class="post-count pull-right"> (2)</span>
+        </li>
+        <li>
+          <a href="">DIY & Tips</a>
+          <span class="post-count pull-right"> (2)</span>
+        </li>
+        <li>
+          <a href="">Lifestyle</a>
+          <span class="post-count pull-right"> (2)</span>
+        </li>
       </ul>
     </aside>
     <aside class="widget pos-padding">
-      <h3 class="widget-title text-uppercase text-center">
-	Follow@Instagram
-      </h3>
-      <div class="intragram-follow">
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
-	<a href="#"><%= image_tag '/images/ins-flow.jpg' %></a>
+      <h3 class="widget-title text-uppercase text-center">Follow@Instagram</h3>
+      <div class="instragram-follow">
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
+        <a href="#">
+          <%= image_tag '/images/ins-flow.jpg' %>
+        </a>
       </div>
     </aside>
   </div>
-</div> <!-- col-md-4 -->
-<div class="col-md-4 jquery-stickit-spacer" style="visibility: hidden;">
 </div>

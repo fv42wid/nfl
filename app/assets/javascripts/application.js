@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+    $("[data-sticky_column]").stickit({
+	scope: StickScope.Parent,
+	top: 0
+    });
+});
