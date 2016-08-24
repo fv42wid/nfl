@@ -24,7 +24,7 @@
 	    </div>
 	    <div class="social-share">
 	      <span class="social-share-title pull-left text-capitalize">
-	      By <%= @last_story.author.email %> On <%= @last_story.created_at.to_formatted_s(:long) %>
+	      By <%= @last_story.author.profile.name %> On <%= @last_story.created_at.to_formatted_s(:long) %>
 	      </span>
 	      <ul class="text-center pull-right">
 		<li>
@@ -76,7 +76,7 @@
 		    <p><%= story.body[0..10] %></p>
 		    <div class="social-share">
 		      <span class="social-share-title pull-left text-capitalize">
-			By <%= story.author.email %> On <%= story.created_at.to_formatted_s(:long) %>
+			By <%= story.author.profile.name %> On <%= story.created_at.to_formatted_s(:long) %>
 		      </span>
 		    </div>
 		  </div>
