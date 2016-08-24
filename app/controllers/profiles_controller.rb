@@ -11,11 +11,15 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @author = @profile.author
   end
 
   # GET /profiles/new
   def new
     @profile = Profile.new
+    if current_author.profile
+      redirect_to edit_author_profile_path(current_author, current_author.profile)
+    end
   end
 
   # GET /profiles/1/edit
@@ -26,6 +30,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
+    @profile.author_id = current_author.id
 
     respond_to do |format|
       if @profile.save
