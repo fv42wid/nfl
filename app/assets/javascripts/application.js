@@ -20,4 +20,12 @@ $(function() {
 	scope: StickScope.Parent,
 	top: 0
     });
+
+    $('#widget-feature').owlCarousel({
+	singleItem: true,
+	navigation: true,
+	navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+	autoPlay: true,
+	pagination: false
+    });
 });
