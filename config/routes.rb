@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :subscribers
   devise_for :authors
   resources :authors do
     resources :profiles
