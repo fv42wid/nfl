@@ -1,5 +1,9 @@
 <div class="social-share">
-  <ul class="text-center text-center">
+  <span class="social-share-title pull-left text-capitalize">
+    By <%= story.author.email %> On 
+    <%= story.created_at.to_formatted_s(:long) %>
+  </span>
+  <ul class="text-center pull-right">
     <li>
       <a href="#" class="s-facebook">
 	<i class="fa fa-facebook"></i>

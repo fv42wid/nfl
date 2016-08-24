@@ -2,31 +2,27 @@
   <div class="container">
     <div class="row" style="position: relative">
       <div class="col-md-8">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @story.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @story.body %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @story.author_id %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @story.image %>
-</p>
-
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
-
+	<p id="notice"><%= notice %></p>
+	<article class="post">
+	  <div class="post-thumb">
+	    <a href="#">
+	      <%= image_tag @story.image %>
+	    </a>
+	  </div>
+	  <div class="post-content">
+	    <header class="entry-header text-center text-uppercase">
+	      <h1 class="entry-title">
+		<%= @story.title %>
+	      </h1>
+	    </header>
+	    <div class="entry-content">
+	      <p>
+		<%= @story.body %>
+	      </p>
+	    </div>
+	    <%= render partial: "layouts/social_share", :locals => {story: @story} %>
+	  </div>
+	</article>
       </div>
       <%= render partial: "sidebar" %>
     </div>
