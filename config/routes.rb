@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :authors
-  resources :authors, do
+  resources :authors do
     resources :profiles
   end
   resources :stories

@@ -39,6 +39,7 @@
 		<ul class="sub-menu">
 		  <li>
 		    <%= link_to 'New Story', new_story_path %>
+		    <%= link_to 'Edit Profile', new_author_profile_path(current_author) %>
 		    <%= link_to 'Log Out', destroy_author_session_path, :method => :delete %>
 		  </li>
 		</ul>
