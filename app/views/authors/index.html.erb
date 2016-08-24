@@ -1,0 +1,25 @@
+<div class="main-content">
+  <div class="container">
+    <div class="row" style="position: relative">
+      <div class="col-md-8">
+	<article>
+	  <div class="post-area">
+	    <div class="about-p">
+	      <h2>Writers</h2>
+	    </div>
+	    <% @authors.each do |author| %>
+	      <div class="single-about">
+		<div class="about-us-text">
+		  <h4 class="text-uppercase">
+		    <%= author.profile.name %>
+		  </h4>
+		  <p><%= author.profile.description %></p>
+		</div>
+	      </div>
+	    <% end %>
+	  </div>
+	</article>
+      </div>
+    </div>
+  </div>
+</div>
