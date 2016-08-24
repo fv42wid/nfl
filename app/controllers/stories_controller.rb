@@ -19,6 +19,9 @@ class StoriesController < ApplicationController
 
   # GET /stories/new
   def new
+    if current_author.profile == nil
+      redirect_to stories_path, notice: 'Create a profile before submitting a story'
+    end
     @story = Story.new
   end
 
