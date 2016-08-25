@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @subscriber.email %>
-</p>
-
-<%= link_to 'Edit', edit_subscriber_path(@subscriber) %> |
-<%= link_to 'Back', subscribers_path %>
+<div class="main-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+	<h3><%= @subscriber.email %> has been subscribed</h3>
+	<p>Click 
+	  <%= link_to 'here', session[:return_to] %>
+	  to continue
+	</p>
+      </div>
+    </div>
+  </div>
+</div>

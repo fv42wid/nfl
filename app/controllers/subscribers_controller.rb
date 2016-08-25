@@ -25,10 +25,11 @@ class SubscribersController < ApplicationController
   # POST /subscribers.json
   def create
     @subscriber = Subscriber.new(subscriber_params)
+    session[:return_to] ||= request.referrer
 
     respond_to do |format|
       if @subscriber.save
-        format.html { redirect_to request.referer, notice: 'Subscriber was successfully created.' }
+        format.html { redirect_to @subscriber, notice: 'Subscriber was successfully created.' }
         format.json { render :show, status: :created, location: @subscriber }
       else
         format.html { render :new }
