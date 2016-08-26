@@ -156,7 +156,7 @@
       <ul>
 	<% @categories.each do |category| %>
           <li>
-            <a href=""><%= category.name %></a>
+            <%= link_to category.name, category %>
             <span class="post-count pull-right"> (<%= category.stories.count %>)</span>
           </li>
 	<% end %>
