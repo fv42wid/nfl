@@ -10,13 +10,14 @@ class StoriesController < ApplicationController
     last_array.push(@last_story)
     @stories = Story.last(12).reverse - last_array
     @subscriber = Subscriber.new
-    
+    @categories = Category.all
   end
 
   # GET /stories/1
   # GET /stories/1.json
   def show
     @subscriber = Subscriber.new
+    @categories = Category.all
   end
 
   # GET /stories/new

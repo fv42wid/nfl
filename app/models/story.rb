@@ -3,6 +3,7 @@ class Story < ApplicationRecord
   friendly_id :title, use: :slugged
 
   belongs_to :author
+  belongs_to :category
 
   def save_image(tempfile)
     filename = "#{self.id.to_s}.jpg"
