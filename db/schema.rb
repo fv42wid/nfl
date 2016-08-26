@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825200759) do
+ActiveRecord::Schema.define(version: 20160826133109) do
 
   create_table "authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 20160825200759) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_authors_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -54,10 +60,10 @@ ActiveRecord::Schema.define(version: 20160825200759) do
     t.string   "body"
     t.integer  "author_id"
     t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "slug"
-    t.string   "category"
+    t.integer  "category_id"
     t.index ["slug"], name: "index_stories_on_slug", unique: true, using: :btree
   end
 

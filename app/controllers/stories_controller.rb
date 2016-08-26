@@ -23,12 +23,15 @@ class StoriesController < ApplicationController
   def new
     if current_author.profile == nil
       redirect_to stories_path, notice: 'Create a profile before submitting a story'
+      
     end
     @story = Story.new
+    @categories = Category.all
   end
 
   # GET /stories/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /stories
@@ -81,6 +84,6 @@ class StoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def story_params
-      params.require(:story).permit(:title, :body, :author_id, :image, :category)
+      params.require(:story).permit(:title, :body, :author_id, :image, :category_id)
     end
 end

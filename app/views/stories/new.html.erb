@@ -4,7 +4,7 @@
       <div class="col-md-8">
 	<div class="leave-comment mr0">
 	  <h3 class="text-uppercase">New Story</h3>
-	  <%= render 'form', story: @story %>
+	  <%= render partial: 'form', locals: {story: @story, categories: @categories} %>
         </div>
       </div>
     </div>
