@@ -2,7 +2,35 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-	<%= debug @stories %>
+	<div class="row">
+	  <% @stories.each do |story| %>
+            <div class="col-md-6">
+	      <article class="post post-grid">
+		<div class="post-thumb">
+		  <%= link_to(image_tag(story.image), story) %>
+		  <a href="<%= story_path(story) %>" class="post-thumb-overlay text-center">
+		    <div class="text-upercase text-center">View Post</div>
+		  </a>
+		</div>
+		<div class="post-content">
+		  <header class="entry-header text-center text-uppercase">
+		    <h1 class="entry-title">
+		      <%= link_to story.title, story %>
+		    </h1>
+		  </header>
+		  <div class="entry-content">
+		    <p><%= story.body[0..10] %></p>
+		    <div class="social-share">
+		      <span class="social-share-title pull-left text-capitalize">
+			By <%= story.author.profile.name %> On <%= story.created_at.to_formatted_s(:long) %>
+		      </span>
+		    </div>
+		  </div>
+		</div>
+	      </article>
+	    </div>
+	  <% end %>
+	</div>
       </div>
       <%= render partial: "stories/sidebar" %>
     </div>
