@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category
+  before_action :last_comments
 
   def show
     @stories = @category.stories
