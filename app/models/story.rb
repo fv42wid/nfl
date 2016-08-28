@@ -4,6 +4,7 @@ class Story < ApplicationRecord
 
   belongs_to :author
   belongs_to :category
+  has_many :comments, :as => :commentable
 
   def save_image(tempfile)
     filename = "#{self.id.to_s}.jpg"
