@@ -17,7 +17,7 @@
 	      </h1>
 	    </header>
 	    <div class="entry-content">
-	      <p><%= @last_story.body %></p>
+	      <%= simple_format @last_story.body[0..200] %>
 	      <div class="btn-continue-reading text-center text-uppercase">
 		<%= link_to "Continue Reading", @last_story, :class => 'more-link' %>
 	      </div>
