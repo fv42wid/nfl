@@ -1655,3 +1655,7 @@ p.go-back-home a:hover {
     color: #fff;
     border-color: #00BFF3;
 }
+
+.author-text a {
+    color: #fff;
+}

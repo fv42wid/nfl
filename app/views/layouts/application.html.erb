@@ -82,7 +82,7 @@
 	</div>
 	<div class="col-md-4">
 	  <aside class="footer-widget">
-	    <h3 class="widget-title text-uppercase">Testimonials</h3>
+	    <h3 class="widget-title text-uppercase">Latest Comments</h3>
 	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	      <ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -90,54 +90,27 @@
 		<li data-target="#myCarousel" data-slide-to="2"></li>
 	      </ol>
 	      <div class="carousel-inner" role="listbox">
-		<div class="item">
-		  <div class="single-review">
-		    <div class="review-text">
-		      <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata magna aliquyam eratma</p>
-		    </div>
-		    <div class="author-id">
-		      <%= image_tag '/images/author.png' %>
-		      <div class="author-text">
-			<h4>Sophia</h4>
-			<h4>CEO, ReadyTheme</h4>
+		<% @last_comments.each_with_index do |comment, index| %>
+		  <% if index == 0 %>
+		    <div class="item active">
+		  <% else %>
+		    <div class="item">
+		  <% end %>
+		    <div class="single-review">
+		      <div class="review-text">
+			<p><%= comment.body %></p>
+		      </div>
+		      <div class="author-id">
+			<%= image_tag '/images/author.png' %>
+			<div class="author-text">
+			  <h4><%= comment.name %></h4>
+			  <%= link_to comment.commentable.title, comment.commentable, :class => "text-uppercase" %>
+			</div>
 		      </div>
 		    </div>
 		  </div>
-		</div>
-		<div class="item">
-                  <div class="single-review">
-                    <div class="review-text">
-		            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed \
-diam nonumy eirmod tempvidunt ut labore et dolore magna aliquyam erat,sed diam \
-voluptua. At vero eos et accusam justo duo dolores et ea rebum.gubergren no sea\
- takimata magna aliquyam eratma</p>
-                    </div>
-                    <div class="author-id">
-		            <%= image_tag '/images/author.png' %>
-			          <div class="author-text">
-				    <h4>Sophia</h4>
-				    <h4>CEO, ReadyTheme</h4>
-				          </div>
-                    </div>
-                  </div>
-                </div>
-		<div class="item active">
-                  <div class="single-review">
-                    <div class="review-text">
-		            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed \
-diam nonumy eirmod tempvidunt ut labore et dolore magna aliquyam erat,sed diam \
-voluptua. At vero eos et accusam justo duo dolores et ea rebum.gubergren no sea\
- takimata magna aliquyam eratma</p>
-                    </div>
-                    <div class="author-id">
-		            <%= image_tag '/images/author.png' %>
-			          <div class="author-text">
-				    <h4>Sophia</h4>
-				    <h4>CEO, ReadyTheme</h4>
-				          </div>
-                    </div>
-                  </div>
-                </div>
+		<% end %>
+		
 	      </div>
 	    </div>
 	  </aside>

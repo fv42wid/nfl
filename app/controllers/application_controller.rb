@@ -1,3 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+
+  def last_comments
+    @last_comments = Comment.last(3)
+  end
 end
