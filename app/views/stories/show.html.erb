@@ -16,9 +16,7 @@
 	      </h1>
 	    </header>
 	    <div class="entry-content">
-	      <p>
-		<%= @story.body %>
-	      </p>
+	      <%= simple_format @story.body %>
 	    </div>
 	    <%= render partial: "layouts/social_share", :locals => {story: @story} %>
 	  </div>
