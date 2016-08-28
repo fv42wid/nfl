@@ -18,6 +18,7 @@ class StoriesController < ApplicationController
   def show
     @subscriber = Subscriber.new
     @categories = Category.all
+    @comment = Comment.new
   end
 
   # GET /stories/new
