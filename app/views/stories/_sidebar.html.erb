@@ -28,37 +28,24 @@
 
     </aside>
     <aside class="widget">
-      <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
-      <div class="popular-post">
-	<a href="#" class="popular-img">
-	  <%= image_tag '/images/p1.jpg' %>
-	  <div class="p-overlay"></div>
-        </a>
-        <div class="p-content">
-          <a href="#" class="text-uppercase">Home is peaceful Place</a>
-          <span class="p-date">February 15, 2016</span>
-        </div>
-      </div>
-      <div class="popular-post">
-        <a href="#" class="popular-img">
-	  <%= image_tag '/images/p1.jpg' %>
-          <div class="p-overlay"></div>
-        </a>
-        <div class="p-content">
-          <a href="#" class="text-uppercase">Home is peaceful Place</a>
-          <span class="p-date">February 15, 2016</span>
-        </div>
-      </div>
-      <div class="popular-post">
-        <a href="#" class="popular-img">
-	  <%= image_tag '/images/p1.jpg' %>
-          <div class="p-overlay"></div>
-        </a>
-        <div class="p-content">
-          <a href="#" class="text-uppercase">Home is peaceful Place</a>
-          <span class="p-date">February 15, 2016</span>
-        </div>
-      </div>
+      <h3 class="widget-title text-uppercase text-center">Recent Stories</h3>
+      <% @last4_stories.each do |last_story| %>
+        <div class="popular-post">
+	  <a href="#" class="popular-img">
+	    <%= image_tag last_story.image %>
+	    <div class="p-overlay"></div>
+          </a>
+          <div class="p-content">
+            <a href="#" class="text-uppercase">
+	      <%= last_story.title %>
+	    </a>
+            <span class="p-date">
+	      <%= last_story.created_at.to_formatted_s(:long) %>
+	    </span>
+          </div>
+	</div>
+      <% end %>
+      
     </aside>
     <aside class="widget">
       <h3 class="widget-title text-uppercase text-center">Featured Posts</h3>
@@ -93,63 +80,28 @@
       </div>
     </aside>
     <aside class="widget pos-padding">
-      <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
-      <div class="thumb-latest-posts">
-        <div class="media">
-          <div class="media-left">
-            <a href="#" class="popular-img">
-	      <%= image_tag '/images/r-p.jpg' %>
-              <div class="p-overlay"></div>
-            </a>
+      <h3 class="widget-title text-uppercase text-center">Recent Stories</h3>
+      <% @last4_stories.each do |last_story| %>
+        <div class="thumb-latest-posts">
+          <div class="media">
+            <div class="media-left">
+              <a href="#" class="popular-img">
+		<%= image_tag '/images/r-p.jpg' %>
+		<div class="p-overlay"></div>
+              </a>
+            </div>
+            <div class="p-content">
+              <a href="#" class="text-uppercase">
+		<%= last_story.title %>
+	      </a>
+              <span class="p-date">
+		<%= last_story.created_at.to_formatted_s(:long) %>
+	      </span>
+            </div>
           </div>
-          <div class="p-content">
-            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-            <span class="p-date">February 15, 2016</span>
-          </div>
-        </div>
-      </div>
-      <div class="thumb-latest-posts">
-        <div class="media">
-          <div class="media-left">
-            <a href="#" class="popular-img">
-	      <%= image_tag '/images/r-p.jpg' %>
-              <div class="p-overlay"></div>
-            </a>
-          </div>
-          <div class="p-content">
-            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-            <span class="p-date">February 15, 2016</span>
-          </div>
-        </div>
-      </div>
-      <div class="thumb-latest-posts">
-        <div class="media">
-          <div class="media-left">
-            <a href="#" class="popular-img">
-	      <%= image_tag '/images/r-p.jpg' %>
-              <div class="p-overlay"></div>
-            </a>
-          </div>
-          <div class="p-content">
-            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-            <span class="p-date">February 15, 2016</span>
-          </div>
-        </div>
-      </div>
-      <div class="thumb-latest-posts">
-        <div class="media">
-          <div class="media-left">
-            <a href="#" class="popular-img">
-	      <%= image_tag '/images/r-p.jpg' %>
-              <div class="p-overlay"></div>
-            </a>
-          </div>
-          <div class="p-content">
-            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-            <span class="p-date">February 15, 2016</span>
-          </div>
-        </div>
-      </div>
+	</div>
+      <% end %>
+
     </aside>
     <aside class="widget border pos-padding">
       <h3 class="widget-title text-uppercase text-center">Categories</h3>
