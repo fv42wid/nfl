@@ -524,9 +524,9 @@ about me
 }
 
 .about-me-widget {
-    background: url(/images/me-cover.jpg) no-repeat;
-    background-size: 100%;
-    background-color: #fff;
+    //background: url(/images/me-cover.jpg) no-repeat;
+    //background-size: 100%;
+    //background-color: #fff;
 }
 
 .about-me-img {
