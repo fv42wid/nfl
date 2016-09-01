@@ -28,8 +28,8 @@
 	    <li><a href="<%= stories_path %>">Home</a></li>
 	    <li><a href="<%= stories_path %>">Stories</a></li>
 	    <li><a href="<%= authors_path %>">Authors</a></li>
-	    <li><a href="#">About</a></li>
-	    <li><a href="#">Contact</a></li>
+	    <li><a href="/pages/about">About</a></li>
+	    <li><a href="/pages/contact">Contact</a></li>
 	    <% if author_signed_in? %>
 	      <li class="menu-item-has-children">
 		<a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -46,14 +46,16 @@
 	      </li>
 	    <% end %>
 	  </ul>
-	  <div class="i_con">
-	    <a href="https://www.facebook.com/sharer/sharer.php?u=<%= "#{request.original_url}/#{@last_story.slug}" %>" title="Share on Facebook" target="_blank">
-	      <i class="active fa fa-facebook"></i>
-	    </a>
-	    <a href="http://twitter.com/home?status=<%= "#{request.original_url}/#{@last_story.slug}" %>" title="Share on Twitter" target="_blank">
-	      <i class="active fa fa-twitter"></i>
-	    </a>
-	  </div>
+	  <% if controller_name != 'pages' and controller_name != 'authors' %>
+	    <div class="i_con">
+	      <a href="https://www.facebook.com/sharer/sharer.php?u=<%= "#{request.original_url}/#{@last_story.slug}" %>" title="Share on Facebook" target="_blank">
+		<i class="active fa fa-facebook"></i>
+	      </a>
+	      <a href="http://twitter.com/home?status=<%= "#{request.original_url}/#{@last_story.slug}" %>" title="Share on Twitter" target="_blank">
+		<i class="active fa fa-twitter"></i>
+	      </a>
+	    </div>
+	  <% end %>
 	</div>
       </div>
     </div>
