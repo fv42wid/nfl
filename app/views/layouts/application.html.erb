@@ -47,8 +47,12 @@
 	    <% end %>
 	  </ul>
 	  <div class="i_con">
-	    <a href="#"><i class="active fa fa-twitter"></i></a>
-	    <a href="#"><i class="active fa fa-facebook"></i></a>
+	    <a href="https://www.facebook.com/sharer/sharer.php?u=<%= "#{request.original_url}/#{@last_story.slug}" %>" title="Share on Facebook" target="_blank">
+	      <i class="active fa fa-facebook"></i>
+	    </a>
+	    <a href="http://twitter.com/home?status=<%= "#{request.original_url}/#{@last_story.slug}" %>" title="Share on Twitter" target="_blank">
+	      <i class="active fa fa-twitter"></i>
+	    </a>
 	  </div>
 	</div>
       </div>
