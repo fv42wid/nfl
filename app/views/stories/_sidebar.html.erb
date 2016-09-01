@@ -53,30 +53,7 @@
 	(adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </aside>
-    <aside class="widget pos-padding">
-      <h3 class="widget-title text-uppercase text-center">Recent Stories</h3>
-      <% @last4_stories.each do |last_story| %>
-        <div class="thumb-latest-posts">
-          <div class="media">
-            <div class="media-left">
-              <a href="#" class="popular-img">
-		<%= image_tag '/images/r-p.jpg' %>
-		<div class="p-overlay"></div>
-              </a>
-            </div>
-            <div class="p-content">
-              <a href="#" class="text-uppercase">
-		<%= last_story.title %>
-	      </a>
-              <span class="p-date">
-		<%= last_story.created_at.to_formatted_s(:long) %>
-	      </span>
-            </div>
-          </div>
-	</div>
-      <% end %>
 
-    </aside>
     <aside class="widget border pos-padding">
       <h3 class="widget-title text-uppercase text-center">Categories</h3>
       <ul>
